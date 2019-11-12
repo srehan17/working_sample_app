@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: %i[new create edit update]
+  resources :microposts,          only: %i[create destroy]
+
   # new_password_reset_path
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
